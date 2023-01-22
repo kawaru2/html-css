@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../ex004/icon-html5.ico" type="image/x-icon">
+    <title>Vídeos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor.</p>
+    <!-- a ordem dos arquivos de vídeo fazem a diferença. O navegador sempre vai usar o primeiro compatível. -->
+    <!-- O parâmetro poster="" é para receber um valor. Esse valor será um arquivo que carrega a thumbnail do vídeo. -->
+    <video controls width="560" height="315">
+        <source src="./midia/video-01.mp4" type="video/mp4">
+        <source src="./midia/Video-01.mkv" type="video/mp4">
+        <source src="./midia/Video-01.webm" type="video/webm">
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos</p>
+    </video>
+    <h1>Inserindo vídeos do YouTube</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/tbcXhRG9o8I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</body>
+</html>

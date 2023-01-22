@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../ex004/icon-html5.ico" type="image/x-icon">
+    <title>Teste de Responsividade</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            background-color: gray;
+        }
+
+        /*
+            O máx-width serve para informar o quão sua página se expande.
+            O min-width serve para informar o quão sua página se comprime, ou seja, até quão pequeno sua página consegue ficar antes de quebrar os elementos.
+        */
+
+        main {
+            background-color: white;
+            min-width: 280px;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        main > h1 {
+            padding-bottom: 5px;
+        }
+
+        main > p {
+            padding: 15px 0px;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Teste de Responsividade</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo perferendis ratione quaerat ut nulla cum doloribus quod, dolores totam libero animi tenetur, harum nobis unde tempora suscipit? Quas, dicta similique. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, reprehenderit blanditiis! Doloremque dolores similique eius perspiciatis culpa nulla, mollitia ex repudiandae, facere accusantium cupiditate, ea quod ipsam dolorem. Necessitatibus, illo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam est reiciendis, sed excepturi quae voluptates blanditiis perspiciatis enim, soluta quidem ab nihil? Quia ullam eligendi voluptatum voluptate excepturi provident reiciendis!</p>
+        <!-- A tag picture ajuda na responsividade pois podemos utilizar o "source media" para substituir a imagem atual por uma inferior para que fique responsivo para dispositivos grandes ou pequenos. -->
+        <picture>
+            <!-- max-width = se meu site tiver o tamanho de pelo menos 600px eu utilizo o arquivo normal (RECOMENDADO) -->
+            <!-- min-width = se meu site tiver pelo menos 600px eu utilizo o arquivo pequeno, abaixo de 600px eu utilizo o arquivo normal -->
+            <source media="(max-width:600px)" srcset="../desafio-cap17/assets/imagens/irina-blok-pq.jpg">
+            <img src="../desafio-cap17/assets/imagens/irina-blok.jpg" alt="Irina Blok">
+        </picture>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam debitis beatae nihil quas illo officia voluptas, esse eius atque dignissimos velit culpa, enim quidem ex voluptates quibusdam corporis, quam porro. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil nam dolore adipisci quaerat dolorem cupiditate voluptas vitae sint iusto odio enim consectetur numquam, eum et, accusamus magnam consequuntur, dignissimos perspiciatis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptatum nam rem. Sit nulla, delectus quia sequi perferendis illum? Quaerat, sunt. Odit quas nisi ullam non, sed eveniet atque dolore!</p>
+    </main>
+</body>
+</html>
