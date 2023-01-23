@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../ex004/icon-html5.ico" type="image/x-icon">
+    <title>Alinhamento Vertical</title>
+    <style>
+        #container {
+            background-color: purple;
+            background-size: 100% 100%;
+
+            /* O position relative já vem por padrão, não é necessário ser colocado. Mas,
+            como forma de aprendizado e para conhecimento, ele está presente abaixo. */
+            position: relative;
+            height: 96vh;
+            padding: 10px;
+            background-image: url(imagens/target001.png);
+
+        }
+
+        #conteudo {
+            background-image: url(imagens/target001.png);
+            height: 200px;
+            width: 400px;
+            /* position vai me liberar novos elementos */
+            position: absolute;
+            background-color: yellow;
+            background-size: 100% 100%;
+
+            /* por conta do position absolut, consigo utilizar o: */
+            top: 50%;
+            left: 50%;
+
+            /* para a "correção" da centralização do conteúdo, vamos
+            precisar de uma transformação. Para entender melhor, coloque
+            o parâmetro abaixo como comentário ou exclua-o. */
+
+            transform: translate(-50%, -50%);
+
+            /* Primeiro elemento é para as direções: esquerda(negativo -) e direita (positivo +) */
+        }
+
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>
