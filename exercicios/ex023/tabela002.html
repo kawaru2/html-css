@@ -11,9 +11,25 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         table {
+            position: relative;
             width: 500px;
             border-collapse: collapse;
+        }
+
+        /*
+        par = even = 2n
+        ímpar = odd = 2n-1
+        */
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray;
         }
 
         td, th {
@@ -21,9 +37,19 @@
             padding: 10px;
         }
 
+        #pop {
+            width: 100px;
+        }
+
         thead, tfoot {
-            background-color: gray;
+            background-color: #383838;
             color: white;
+        }
+
+        thead tr th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
         }
 
         .numero {
@@ -37,6 +63,7 @@
     <!-- 
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION (legenda ou título de uma tabela)
             THEAD
                 TR, TD, TH
             TBODY
@@ -45,10 +72,12 @@
                 TR, TD, TH
      -->
      <table>
+        <!-- Não se usa tr, td e nem th dentro de caption -->
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" id="pop">População</th>
             </tr>
         </thead>
         <tbody>
@@ -163,7 +192,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="numero"><strong>210.147.125</strong></td>
             </tr>
         </tfoot>
