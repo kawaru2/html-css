@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes</title>
+</head>
+<body>
+    <h1>Meu site principal</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae quam magni debitis possimus, minima pariatur quia cum eius, aperiam rem doloremque velit. Illum consequuntur alias fuga numquam corporis unde cum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste totam fugiat sunt molestias, animi exercitationem quos odit rem libero officia, asperiores magni beatae dignissimos maxime. Earum quasi voluptatibus vitae rerum.</p>
+
+    <!-- 
+        Vamos aplicar um método de segurança no iframe, vamos dar um valor para que evite riscos potenciais como dados de seu site vazados.
+        Essa configuração aumenta a segurança do seu site e evite que seja invadido através do iframe, porém, as pessoas que estiverem usando
+        o iframe, não conseguirão cadastrar seus dados ou acessas seus dados, o recurso servirá apenas para uso visual.
+        Também tem outro parâmetro para utilizar, o parâmetro "referrerpolicy = no-referrer", ele evita que o site colete dados do usuário para
+        utilizar em propagandas e anúncios.
+     -->
+
+    <iframe src="./paginas-extras/pagina004.html" sandbox="sandbox">
+        Infelizmente seu navegador não é compatível...
+    </iframe>
+    <!--
+        Caso queira diminuir a segurança (sites confiáveis ou que seja de sua própria origem) para que a experiência do usuário seja melhor,
+        é bem simples, dê o valor de sandbox como:
+        "allow-same-origin" para permitir dados que sejam de mesma origem.
+        "allow-forms" para permitir formulários.
+        "allow-scripts" para permitir scripts (A tag formulário utiliza de scripts).
+    -->
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, consequuntur non placeat repudiandae ipsam illum delectus optio quo aliquam, exercitationem sint sit. Distinctio quibusdam voluptas sunt. Quas nemo exercitationem distinctio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum repellat consequuntur adipisci ad neque itaque aspernatur. Sint voluptate illum rerum, delectus velit neque commodi soluta, alias cumque debitis nemo autem?</p>
+</body>
+</html>
