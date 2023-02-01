@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+    <!-- O action é a ação que executará. Nesse caso será a função em outra linguagem como Java, PHP... -->
+    <!-- No PHP geralmente se usa o name para se usar o label (uma etiqueta para ligar o Nome ao que for digitado) -->
+    <!-- Já o JavaScript geralmente usa o id de input para executar a function -->
+    <form action="cadastro.php" method="post" autocomplete="off">
+        <!-- Métodos Get é para campos não sensíveis (pouco importante como nome, idade, altura... diferente de senhas,
+            número de cartão, envio de fotos (qualquer arquivo),de login em geral.) e para que a url seja compartilhável,
+            porém,esse métodosó pode ser usado caso seuformulário seja de no máximo de 3mil bytes, ou seja, aproximadamente
+            3mil letras -->
+        <p><label for="inome">Nome: </label><input type="text" name="nome" id="inome"> </p>
+        <p><label for="isobrenome">Sobrenome: </label><input type="text" name="sobrenome" id="isobrenome"> </p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+</body>
+</html>
