@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Teste de formulário</h1>
+    <form action="cadastro.php" autocomplete="on">
+        <!-- Para agrupar os campos, utilizamos a tag <fieldset> -->
+        <fieldset>
+            <!-- legend para agrupar ao fieldset, para informar melhor o que estará pedindo esse grupo de campos a serem informados -->
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" autocomplete="name" minlength="4" maxlength="20" size="10" placeholder="Nome completo" required>
+            </p>
+            <p>
+                <label for="iemail">Email:</label>
+                <input type="email" name="email" id="iemail" autocomplete="email" placeholder="example@example.com" required>
+            </p>
+            <p>
+                <label for="itel">Tel:</label>
+                <!-- pattern faz parte de espressões regulares -->
+                <!-- ^ = inicio da RegEx | $ = fim da RegEx | \( = abrir parênteses | \) = fechar parênteses | {4,5} = números para serem digitados no mínimo e no máximo | - = um traço para separar números como o de telefone ou de celular \d = número a ser digitado -->
+                <input type="tel" name="tel" id="itel" autocomplete="tel" required pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(xx) xxxxx-xxxx">
+            </p>
+        </fieldset>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+        <!--
+            Estudar sobre RegEx (Expressões Regulares), vai ajudar com uma melhor experiência
+            ao usuário com o número pedido no formulário e outras opções também.
+            O ideal é que seja validado mas essa validação só pode ser feita através de uma
+            linguagem de programação como JavaScript, PHP...
+        -->
+
+    </form>
+</body>
+</html>
