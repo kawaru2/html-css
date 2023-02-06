@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/media-query.css">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu Site</h1>
-        <menu>
+        <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
+        <menu id="menu">
             <ul>
                 <li><a href="#">Opção 1</a></li>
                 <li><a href="#">Opção 2</a></li>
@@ -28,8 +32,27 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas numquam magnam maxime, tenetur eaque totam iste ducimus ullam accusantium corrupti. Dolore possimus eos provident atque at? Iure asperiores iste culpa. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, ut adipisci incidunt tempore ex velit doloremque molestiae fugit numquam dolore dolorem corrupti minus sed iure magni qui a odit id.</p>
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus blanditiis aliquam optio, architecto dignissimos quia consequuntur id at fuga! Illum excepturi rerum error odio? Ex laudantium molestias velit eligendi maxime. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit vel voluptate veritatis soluta officiis ex fugiat, delectus, quis natus et optio repellat nostrum ducimus eveniet nulla sed aliquid. In, reprehenderit.</p>
-            
         </article>
     </main>
+    <script>
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 790) {
+                menu.style.display = 'block'
+            }
+            else {
+                menu.style.display = 'none'
+            }
+        }
+
+        function clickMenu() {
+            if (menu.style.display == 'block') {
+                menu.style.display = 'none'
+            }
+            else {
+                (menu.style.display = 'block')
+            }
+        }
+    </script>
 </body>
 </html>
