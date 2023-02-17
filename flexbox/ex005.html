@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align-items</title>
+    <style>
+        .container {
+            border: 1px solid black;
+            display: flex;
+            max-width: 350px;
+        }
+
+        .item {
+            background-color: blueviolet;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            flex: 1;
+        }
+
+        .center {
+            align-items: center;
+        }
+
+        .stretch {
+            align-items: stretch;
+        }
+
+        .flex-start {
+            align-items: flex-start;
+        }
+
+        .flex-end {
+            align-items: flex-end;
+        }
+
+        .flex-baseline {
+            align-items: baseline;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .central {
+            height: 300px;
+            justify-content: center;
+        }
+
+        .central .item {
+            flex: 0;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Orientação: Row</h1>
+    <h2>Center</h2>
+    <p>O align center, centralizará os elementos e cresceram por padrão, de acordo com o necessário de cada elemento.</p>
+    <div class="container center">
+        <div class="item">item 1</div>
+        <div class="item">Lorem eum adipisci molestiae consequatur in animi ducimus!</div>
+        <div class="item">item 3 mais algum texto.Limpsus</div>
+    </div>
+    <h2>Stretch</h2>
+    <p>O align-items stretch, fará com que todos os elementos aumentem de tamanho de acordo com o elemento maior.</p>
+    <div class="container stretch">
+        <div class="item">item 1</div>
+        <div class="item">Lorem eum adipisci molestiae consequatur in animi ducimus!</div>
+        <div class="item">item 3 mais algum texto.Limpsus</div>
+    </div>
+    <h2>Flex-start</h2>
+    <p>O flex-start fará com que os elementos iniciem na parte de cima mas que todos os elementos permaneçam do mesmo tamanho que o conteúdo, podendo assim, os elementos serem de tamanhos diferentes.</p>
+    <div class="container flex-start">
+        <div class="item">item 1</div>
+        <div class="item">Lorem eum adipisci molestiae consequatur in animi ducimus!</div>
+        <div class="item">item 3 mais algum texto.Limpsus</div>
+    </div>
+    <h2>Flex-end</h2>
+    <p>O contrário do flex-start. Todos os elementos começarão na parte debaixo do container, respeitando o tamanho do conteúdo, ou seja, todos os elementos podem ser de tamanhos diferentes sem afetar uns aos outros.</p>
+    <div class="container flex-end">
+        <div class="item">item 1</div>
+        <div class="item">Lorem eum adipisci molestiae consequatur in animi ducimus!</div>
+        <div class="item">item 3 mais algum texto.Limpsus</div>
+    </div>
+    <h2>Flex-baseline</h2>
+    <p>O tamanh do container será até a base da linha, ou seja, o item usará como base, o conteúdo</p>
+    <div class="container flex-baseline">
+        <div class="item">item 1</div>
+        <div class="item">Lorem eum adipisci molestiae consequatur in animi ducimus!</div>
+        <div class="item">item 3 mais algum texto.Limpsus</div>
+    </div>
+    <h1>Orientação: Column</h1>
+    <h2>Center (column)</h2>
+    <div class="container center column">
+        <div class="item">item 1</div>
+        <div class="item">Lorem eum adipisci molestiae consequatur in animi ducimus!</div>
+        <div class="item">item 3 mais algum texto.Limpsus</div>
+    </div>
+    <h2>Stretch (column)</h2>
+    <div class="container stretch column">
+        <div class="item">item 1</div>
+        <div class="item">Lorem eum adipisci molestiae consequatur in animi ducimus!</div>
+        <div class="item">item 3 mais algum texto.Limpsus</div>
+    </div>
+    <h2>Flex-start (column)</h2>
+    <div class="container flex-start column">
+        <div class="item">item 1</div>
+        <div class="item">Lorem eum adipisci molestiae consequatur in animi ducimus!</div>
+        <div class="item">item 3 mais algum texto.Limpsus</div>
+    </div>
+    <h2>Flex-end (column)</h2>
+    <div class="container flex-end column">
+        <div class="item">item 1</div>
+        <div class="item">Lorem eum adipisci molestiae consequatur in animi ducimus!</div>
+        <div class="item">item 3 mais algum texto.Limpsus</div>
+    </div>
+    <h2>Flex-baseline (column)</h2>
+    <div class="container baseline column">
+        <div class="item">item 1</div>
+        <div class="item">Lorem eum adipisci molestiae consequatur in animi ducimus!</div>
+        <div class="item">item 3 mais algum texto.Limpsus</div>
+    </div>
+    <h2>Alinhamento central à tela</h2>
+    <section class="container central center">
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sunt aliquid?</div>
+    </section>
+</body>
+</html>
