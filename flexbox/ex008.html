@@ -8,8 +8,9 @@
     <style>
         .container {
             display: flex;
-            max-width: 300px;
+            max-width: 500px;
             border: 2px solid black;
+            margin: 20px;
         }
 
         .items {
@@ -19,8 +20,16 @@
             margin: 5px;
         }
 
+        .fg-0 {
+            flex-grow: 0;
+        }
+
         .fg-1 {
             flex-grow: 1;
+        }
+
+        .fg-2 {
+            flex-grow: 2;
         }
 
         .bauto {
@@ -35,20 +44,33 @@
             flex-basis: 100px;
         }
 
+        .w100 {
+            width: 100px;
+        }
+
     </style>
 </head>
 <body>
+    <h2>Flex-basis: auto</h2>
     <div class="container">
         <div class="items bauto fg-1">A</div>
         <div class="items bauto fg-1">B</div>
         <div class="items bauto fg-1">C</div>
         <div class="items bauto fg-2">D</div>
     </div>
+    <h2>Flex-basis: 0</h2>
     <div class="container">
         <div class="items b0 fg-1">A</div>
-        <div class="items b0 fg-1">B</div>
+        <div class="items b0 fg-1">BBBB</div>
         <div class="items b0 fg-1">C</div>
-        <div class="items b0 fg-1">D</div>
+        <div class="items b0 fg-1">DDDD</div>
+    </div>
+    <h2>Flex-basis + width:100</h2>
+    <div class="container">
+        <div class="items w100 fg-2">A</div>
+        <div class="items w100 fg-2">B</div>
+        <div class="items w100 fg-2">C</div>
+        <div class="items w100 fg-2">D</div>
     </div>
 </body>
 </html>
