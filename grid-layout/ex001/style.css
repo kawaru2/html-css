@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 300px 1fr 2fr; /* A quantidade de valores define a quantidade de colunas com os items */
+    /* Para evitar colocar vários valores, podemos utilizar o propriedade repeat(número de valores a serem repetidos, o valor para ser repetido)
+    exemplo:
+    grid-template-columns: repeat(3, 1fr) */
+}
+
+.grid-items {
+    background-color: aqua;
+    margin: 5px;
+}
