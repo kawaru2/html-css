@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* largura do container (column) */
+    grid-auto-rows: 200px; /* altura do container (row) */
+}
+
+.items {
+    background-color: aqua;
+    margin: 10px;
+    text-align: center;
+}
