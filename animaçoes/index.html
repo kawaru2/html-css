@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações com CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .item {
+            width: 100px;
+            height: 100px;
+        }
+
+        .transitionBackground {
+            transition: background-color 1s;
+        }
+
+        .transitionBackground:hover {
+            background-color: red;
+        }
+
+        .transitionSize {
+            transition: transform 1s;
+        }
+
+        .transitionSize:hover {
+            transform: scale(1.5);
+        }
+
+        .transitionRotate {
+            transition: transform 1s;
+        }
+
+        .transitionRotate:hover {
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>Transições</h1>
+    <h2>Hover</h2>
+    <section>
+        <div class="item blue transitionBackground">Azul</div>
+        <div class="item yellow transitionBackground">Amarelo</div>
+        <div class="item green transitionSize">Verde</div>
+        <div class="item red transitionRotate">Vermelho</div>
+    </section>
+</body>
+</html>
