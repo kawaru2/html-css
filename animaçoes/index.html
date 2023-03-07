@@ -33,7 +33,16 @@
         }
 
         .transitionRotate:hover {
-            transform: rotate(360deg);
+            transform: rotate(180deg);
+        }
+
+        .transitionDelay {
+            transition: width 1s 1s, height 1s;
+        }
+
+        .transitionDelay:hover {
+            width: 200px;
+            height: 200px;
         }
     </style>
 </head>
@@ -45,6 +54,16 @@
         <div class="item yellow transitionBackground">Amarelo</div>
         <div class="item green transitionSize">Verde</div>
         <div class="item red transitionRotate">Vermelho</div>
+    </section>
+    <hr>
+    <h2>Transition Delay</h2>
+    <section>
+        <div class="item red transitionDelay">Vermelho</div>
+    </section>
+    <hr>
+    <h2>Checked</h2>
+    <section>
+        <div></div>
     </section>
 </body>
 </html>
