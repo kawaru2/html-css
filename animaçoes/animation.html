@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações com CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .item {
+            width: 100px;
+            height: 100px;
+        }
+
+        .animationFadeIn {
+            animation: fadeIn 2s linear;
+        }
+
+        .animationFadeOut {
+            /* opacity: 0; */
+            animation: fadeIn 2s linear;
+            animation-direction: reverse;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeIn {
+            from {opacity:0}
+            to {opacity:1}
+        }
+
+        .animationFadeInFadeOut {
+            animation: fadeInFadeOut 2s linear infinite;
+        }
+
+        @keyframes fadeInFadeOut {
+            0% {opacity: 1;}
+            50% {opacity: 0.2;}
+            100% {opacity: 1;}
+        }
+
+        .spinner {
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Animações</h1>
+    <h2>Fade</h2>
+    <section>
+        <div class="item blue animationFadeIn">Azul</div>
+        <div class="item green animationFadeOut">Verde</div>
+        <div class="item red animationFadeInFadeOut">Vermelho</div>
+    </section>
+    <hr>
+        <h2>Spinners</h2>
+        <section>
+            <div class="item spinner blue animationSpinner">Azul</div>
+        </section>
+</body>
+</html>

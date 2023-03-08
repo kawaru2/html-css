@@ -44,6 +44,39 @@
             width: 200px;
             height: 200px;
         }
+
+        .transitionCheckbox {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.5s;
+        }
+
+        .transitionCheckbox:checked {
+            transform: rotatey(360deg);
+        }
+
+        .transitionRadio {
+            width: 50px;
+            height: 50px;
+            transition: transform 1s;
+        }
+
+        .transitionRadio:checked {
+            transform: scale(1.4);
+        }
+
+        .transitionText {
+            width: 100%;
+            height: 50px;
+            font-size: 18px;
+            text-align: center;
+            transition: transform 1s;
+        }
+
+        .transitionText:focus {
+            transform: scaleY(0.5) scaleX(0.7) rotateZ(10deg);
+        }
+
     </style>
 </head>
 <body>
@@ -63,7 +96,14 @@
     <hr>
     <h2>Checked</h2>
     <section>
-        <div></div>
+        <input type="checkbox" class="transitionCheckbox">
+        <input type="radio" name="Radio" class="transitionRadio">
+        <input type="radio" name="Radio" class="transitionRadio">
+    </section>
+    <hr>
+    <h2>Focus</h2>
+    <section>
+        <input type="text" class="transitionText">
     </section>
 </body>
 </html>
